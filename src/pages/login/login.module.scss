@@ -1,0 +1,90 @@
+.loginContainer {
+  .title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+  .form {
+    background: #fff;
+    padding: 58px 44px;
+    border: 1px solid #e1e2f0;
+    border-radius: 10px;
+    box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.5) 0 3px 4px 0;
+    transition: all 0.3s ease;
+    margin: auto;
+    .errorMessage{
+      color:red;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+  }
+
+  .row label {
+    font-size: 20px;
+    color: #8086a9;
+  }
+
+  .row .errorCode {
+    color: red !important;
+    margin-top: 5px;
+  }
+
+  .row .inputField {
+    flex: 1;
+    padding: 13px;
+    border: 1px solid #d6d8e6;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: all 0.2s ease-out;
+    border-radius: 20px;
+    margin-top: 10px;
+    background: #f4f5f7;
+  }
+
+  .row .inputField:focus {
+    outline: none;
+    box-shadow: inset 2px 2px 5px 0 rgba(42, 45, 48, 0.12);
+  }
+
+  .row .inputField::placeholder {
+    color: #c8cddf;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background: linear-gradient(
+      180deg,
+      rgba(108, 77, 218, 0.6) 0%,
+      #522ed2 100%
+    );
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-family: "Open Sans", sans-serif;
+    margin-top: 15px;
+    transition: background 0.2s ease-out;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .loginContainer {
+    form {
+      background: #f9faff;
+      border: none;
+      box-shadow: none;
+      padding: 20px 0;
+      max-width: 350px;
+      width: 100%;
+    }
+  }
+}
