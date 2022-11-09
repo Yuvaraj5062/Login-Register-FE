@@ -1,4 +1,11 @@
 .home {
-  width: 1440px;
-  min-width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .text{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 20px;
+  }
 }

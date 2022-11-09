@@ -5,7 +5,6 @@ import { create } from "yup/lib/Reference";
 
 export const register = createAsyncThunk('authSlice/register', async(payload, {dispatch, rejectWithValue})=>{
     try {
-        console.log(payload, 'in slice')
         const res = await axios.post(`http://localhost:8080/api/v1/auth/create-user`, { ...payload})
         if(res){
             return res
@@ -20,7 +19,7 @@ export const register = createAsyncThunk('authSlice/register', async(payload, {d
 
 export const login = createAsyncThunk('authSlice/login', async(payload, {dispatch, rejectWithValue})=>{
 try {
-    console.log(payload)
+    
     localStorage.setItem("email", payload?.email)
     const  res = await axios.post('http://localhost:8080/api/v1/auth/login', payload)
     if(res){
@@ -71,8 +70,6 @@ const authSlice = createSlice({
         state.loading = false;
         if(action.payload?.status===200){
             state.status=action.payload.status
-            console.log("ful",action.payload?.data?.msg)
-            
             state.message=action.payload?.data?.msg
         }
         else{
