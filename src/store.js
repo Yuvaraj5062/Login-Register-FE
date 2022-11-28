@@ -4,7 +4,7 @@ import thunk from "redux-thunk";
 import AuthReducer from './redux/Auth'
 import storage from "redux-persist/lib/storage";
 import { persistReducer } from "redux-persist";
-
+import DemoReducer from "./redux/features/demo/demoSlice";
 
 const persistConfig = {
     storage,
@@ -15,7 +15,8 @@ const persistConfig = {
 // const PeristedLoginReducer = persistReducer(persistConfig, AuthReducer);
   
 export const rootReducer = combineReducers({
-    auth:AuthReducer
+    auth:AuthReducer,
+    demo: DemoReducer
 })
 
 export const store = configureStore({
